@@ -1,0 +1,16 @@
+// Neural Network
+digraph {
+	A [label="Input Layer (32x32x3)"]
+	B [label="ConvLSTM2D (64 filters, 3x3)"]
+	C [label=BatchNormalization]
+	D [label="ConvLSTM2D (32 filters, 3x3)"]
+	E [label=BatchNormalization]
+	F [label="Reshape (1, 32, 32, 32)"]
+	G [label="Conv3D (1 filter, 3x3x3)"]
+	A -> B
+	B -> C
+	C -> D
+	D -> E
+	E -> F
+	F -> G
+}
